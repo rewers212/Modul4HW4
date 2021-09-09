@@ -14,6 +14,7 @@ namespace Modul4HW4
         {
             var config = new ConfigService();
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+            optionsBuilder.UseLazyLoadingProxies();
             optionsBuilder.UseSqlServer(config.ConnectionString);
             return new ApplicationContext(optionsBuilder.Options);
         }

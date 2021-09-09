@@ -16,8 +16,8 @@ namespace Modul4HW4
         public DateTime? DateOfBirth { get; set; }
         public int OfficeId { get; set; }
         public int TitleId { get; set; }
-        public Title Title { get; set; }
-        public List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
-        public Office Office { get; set; }
+        public virtual Title Title { get; set; }
+        public virtual List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
+        public virtual Office Office { get; set; }
     }
 }
